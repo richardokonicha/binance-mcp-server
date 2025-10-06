@@ -1,0 +1,47 @@
+# Smithery configuration for Binance MCP Server most wondrous
+# An open-source endeavor maintained by richardokonicha
+# Contributions from fellow merchants art most welcome: https://github.com/richardokonicha/binance-mcp-server
+# https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'npx', args: ['tsx', 'src/index.ts'], env: { BINANCE_API_KEY: config.binanceApiKey, BINANCE_API_SECRET: config.binanceApiSecret, BINANCE_TESTNET: config.binanceTestnet.toString(), MCP_SERVER_NAME: config.mcpServerName, MCP_SERVER_VERSION: config.mcpServerVersion, LOG_LEVEL: config.logLevel } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - binanceApiKey
+      - binanceApiSecret
+    properties:
+      binanceApiKey:
+        type: string
+        description: Your Binance API key
+      binanceApiSecret:
+        type: string
+        description: Your Binance API secret
+      binanceTestnet:
+        type: boolean
+        default: true
+        description: Enable Binance testnet (true for testnet, false for mainnet)
+      mcpServerName:
+        type: string
+        default: binance-mcp-server
+        description: MCP server name
+      mcpServerVersion:
+        type: string
+        default: 1.1.1
+        description: MCP server version
+      logLevel:
+        type: string
+        default: info
+        description: Log level
+  exampleConfig:
+    binanceApiKey: your_api_key_here
+    binanceApiSecret: your_api_secret_here
+    binanceTestnet: true
+    mcpServerName: binance-mcp-server
+    mcpServerVersion: 1.1.1
+    logLevel: info
