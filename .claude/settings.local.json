@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp:*)",
+      "Bash(warp-cli mode:*)",
+      "Bash(warp-cli:*)",
+      "Bash(curl:*)",
+      "Bash(sudo lsof:*)",
+      "Bash(chmod:*)",
+      "Bash(/Users/ro/Fugoku/binance-mcp-server/test_account.sh)",
+      "Bash(npm run build:*)",
+      "Bash(/Users/ro/Fugoku/binance-mcp-server/test_all_functions.sh)",
+      "Bash(/Users/ro/Fugoku/binance-mcp-server/test_futures.sh)",
+      "Bash(node:*)",
+      "mcp__binance__get_futures_positions",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Read(//var/folders/0w/bgtfz_953yq_yq3szjnn13100000gn/T/TemporaryItems/NSIRD_screencaptureui_kdXlpr/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
