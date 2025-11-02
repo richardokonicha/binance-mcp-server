@@ -17,7 +17,20 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git remote add:*)",
-      "Read(//var/folders/0w/bgtfz_953yq_yq3szjnn13100000gn/T/TemporaryItems/NSIRD_screencaptureui_kdXlpr/**)"
+      "Read(//var/folders/0w/bgtfz_953yq_yq3szjnn13100000gn/T/TemporaryItems/NSIRD_screencaptureui_kdXlpr/**)",
+      "Bash(find:*)",
+      "Bash(for file in src/tools/*.ts)",
+      "Bash(done)",
+      "mcp__binance__get_price",
+      "mcp__binance__get_account_info",
+      "Bash(pkill:*)",
+      "mcp__binance__get_futures_account_info",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(ls:*)",
+      "Bash(awk:*)",
+      "Bash(npm run dev:*)",
+      "mcp__binance__get_24hr_ticker"
     ],
     "deny": [],
     "ask": []

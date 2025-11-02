@@ -11,6 +11,7 @@ import { marketDataTools } from './tools/market-data.js';
 import { accountTools } from './tools/account.js';
 import { tradingTools } from './tools/trading.js';
 import { futuresTools } from './tools/futures.js';
+import { configureProxyForFetch } from './utils/proxy-fetch.js';
 
 export class BinanceMCPServer {
   private server: Server;
@@ -19,10 +20,13 @@ export class BinanceMCPServer {
 
   constructor() {
     validateEnvironment();
-    
+
+    // Configure proxy for fetch API before creating Binance client
+    configureProxyForFetch();
+
     const config = getBinanceConfig();
     const serverConfig = getServerConfig();
-    
+
     this.server = new Server({
       name: serverConfig.name,
       version: serverConfig.version,
