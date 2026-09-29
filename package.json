@@ -7,9 +7,9 @@
     "binance-mcp-server": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "tsx src/index.ts",
+    "build": "node api.js && tsc",
+    "start": "node api.js && node dist/index.js",
+    "dev": "node api.js && tsx src/index.ts",
     "watch": "nodemon --exec tsx src/index.ts",
     "lint": "eslint src/**/*.ts",
     "typecheck": "tsc --noEmit"
